@@ -1,5 +1,5 @@
 [package]
-authors = ["Pierre-Étienne Meunier <pe@pijul.org>", "Eugeny <e@ajenti.org"]
+authors = ["Pierre-Étienne Meunier <pe@pijul.org>", "Eugeny <e@ajenti.org>"]
 description = "A vector which zeroes its memory on clears and reallocations."
 documentation = "https://docs.rs/russh-cryptovec"
 edition = "2018"
@@ -20,4 +20,6 @@ winapi = {version = "0.3", features = ["basetsd", "minwindef", "memoryapi"]}
 wasm-bindgen-test = "0.3.46"
 
 [features]
+default = ["mlock"]
+mlock = []
 ssh-encoding = ["dep:ssh-encoding"]
